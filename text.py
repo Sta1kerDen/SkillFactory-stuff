@@ -1,0 +1,5 @@
+a = int, input("Введите первую строку: ")
+b = int, input("Введите вторую строку: ")
+a,b = set(a), set(b)
+diff = a.symmetric_difference(b)
+print(diff)
