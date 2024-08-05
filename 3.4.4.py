@@ -1,0 +1,5 @@
+A = int(input('Введите значение A: '))
+B = int(input('Введите значение B: '))
+C = int(input('Введите значение C: '))
+Result = (A >= 45 and B >= 45 and C < 45) or (A >= 45 and B < 45 and C >= 45) or (A < 45 and B >= 45 and C >=45)
+print(Result)
