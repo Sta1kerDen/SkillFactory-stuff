@@ -1,10 +1,5 @@
-field = '''  0 1 2
-0 x - -
-1 - x -
-2 - - -'''
-changed = list(field)
-
 def xwin(n):
+    '''Проверяет соблюдены ли условия для победы x'''
     first = n[10], n[12], n[14]
     second = n[18], n[20], n[22]
     third = n[26], n[28], n[30]
@@ -18,10 +13,3 @@ def xwin(n):
     for i in list_of_cond:
         if ''.join(i) == 'xxx':
             return True
-
-
-if xwin(changed) is True:
-    print('win')
-else:
-    print('lose')
-
