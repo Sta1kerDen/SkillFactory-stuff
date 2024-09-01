@@ -1,27 +1,12 @@
-field = '''  0 1 2
-0 x - -
-1 - x -
-2 - - -'''
-changed = list(field)
-
-def xwin(n):
-    first = n[10], n[12], n[14]
-    second = n[18], n[20], n[22]
-    third = n[26], n[28], n[30]
-    forth = n[10], n[20], n[30]
-    fifth = n[14], n[20], n[26]
-    sixth = n[10], n[18], n[26]
-    seventh = n[12], n[20], n[28]
-    eighth = n[14], n[22], n[30]
-
-    list_of_cond = (first, second, third, forth, fifth, sixth, seventh, eighth)
-    for i in list_of_cond:
-        if ''.join(i) == 'xxx':
-            return True
-
-
-if xwin(changed) is True:
-    print('win')
-else:
-    print('lose')
-
+try: # Добавляем конструкцию try-except для отлова нашей ошибки
+    print("Перед исключением")
+    # теперь пользователь сам вводит числа для деления
+    a = int(input("a: "))
+    b = int(input("b: "))
+    c = a / b # здесь может возникнуть исключение деления на ноль
+    print(c) # печатаем c = a / b, если всё хорошо
+except ZeroDivisionError as e: # Добавляем тип именно той ошибки, которую хотим отловить.     
+    print(e) # Выводим информацию об ошибке
+    print("После исключения")
+ 
+print("После исключения")
